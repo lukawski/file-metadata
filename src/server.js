@@ -6,6 +6,6 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.use('/api', routes)
-app.use('*', (req, res) => res.sendFile(path.join(__dirname, '/view/index.html')))
+app.use('/', (req, res) => res.sendFile(path.join(__dirname, '/view/index.html')))
 
 app.listen(port, () => console.log(`App listening at port ${port}`))
